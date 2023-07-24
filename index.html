@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react intro</title>
+</head>
+
+<body>
+    <!-- Method 1 using html-->
+    <!-- <h1>Hello React</h1> -->
+    <div id="root"></div>
+  
+        <!-- // Method 2 using js
+        // const heading= document.createElement("h1");
+        // heading.innerHTML="hello react";
+        // const root=document.getElementById("root");
+        // root.appendChild(heading);
+
+        // Method 3 using react
+        // firstly we have to import the cdn link of react  -->
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"> </script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <!-- // secondly we will be render our heading using react  -->
+        <script>    
+            const heading1=React.createElement("h1",{
+                id:"tittle1",
+                className:"upper heading",
+            },"hello react in h1");
+            const heading2=React.createElement("div",{
+
+            },"hello react in div");
+            // const root=;
+            const root=ReactDOM.createRoot(document.getElementById("root"));
+            root.render([heading1,heading2]);
+        </script>
+
+
+     
+</body>
+
+</html>
