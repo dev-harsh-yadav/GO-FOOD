@@ -4,7 +4,7 @@ import ResturantCard from "./RestaurantCard";
 
 function filterData(searchText, restaurantList) {
   return restaurantList.filter((restraunts) =>
-    restraunts?.data?.data?.name
+    restraunts?.info?.name
       .toUpperCase()
       .includes(searchText.toUpperCase())
   );
@@ -25,21 +25,14 @@ const Body = () => {
     );
     const detail = await details.json();
     console.log(detail)
-    console.log(
-      detail?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
-    );
     setapiRestaurant(
       detail?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
-    {
-      apiRestaurant?.map((restaurant) => {
-        <ResturantCard {...restaurant?.info} key={restaurant?.info?.id} />;
-      });
-    }
+    setrestaurant(  detail?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      ?.restaurants);
   }
-  return (
+  return  (
     <>
       <div className="searchbar">
         <input
@@ -49,8 +42,7 @@ const Body = () => {
           onChange={(e) => {
             {
               setSearchText(e.target.value);
-              console.log(searchText);
-              data = filterData(searchText, restaurants);
+              data = filterData(e.target.value, apiRestaurant);
               setrestaurant(data);
             }
           }}
@@ -58,16 +50,19 @@ const Body = () => {
         <button className="search-btn">SEARCH</button>
       </div>
       <div className="content">
-        {restaurants.map((restaurant) => {
-          return (
-            <ResturantCard
-              {...restaurant?.data?.data}
-              key={restaurant?.data?.data?.id}
-            />
-          );
-        })}
+      { ( restaurants=== restaurantList) ? (restaurants.map((restaurant) => {
+        return (
+          <ResturantCard
+            {...restaurant?.data?.data}
+            key={restaurant?.data?.data?.id}
+          />
+        );
+      }) ) : restaurants?.map((restaurant) => {
+       return <ResturantCard {...restaurant?.info} key={restaurant?.info?.id} />;
+      }) }
       </div>
     </>
   );
 };
 export default Body;
+
