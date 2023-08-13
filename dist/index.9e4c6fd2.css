@@ -1,6 +1,6 @@
 .header {
   background-color: plum;
-  justify-content: space-between;
+  justify-content: space-around;
   display: flex;
 }
 
@@ -13,11 +13,20 @@
 
 .nav-items li {
   color: #680368;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   padding: 17px;
   font-size: 24px;
   font-weight: 700;
+}
+
+.nav-items li a {
+  text-decoration: none;
+}
+
+.nav-items li a:visited {
+  color: #680368;
 }
 
 #logo-img {
@@ -36,10 +45,11 @@
 }
 
 .card {
-  aspect-ratio: 1 / 1.5;
   background-color: #8da28d33;
   border: 2px solid red;
-  width: 274px;
+  border-radius: 15px;
+  max-width: 274px;
+  min-height: 375px;
   margin: 10px;
   padding: 20px;
 }
@@ -50,18 +60,24 @@
   margin-left: -15px;
 }
 
+.cardcontent {
+  background-color: #39daa60d;
+}
+
 .searchbar {
+  background-color: #a9a9a9;
   justify-content: center;
   align-items: center;
   gap: 10px;
   margin-top: 12px;
+  padding: 10px;
   display: flex;
 }
 
 .searchbar input {
   border: 2px solid #000;
   border-radius: 8px;
-  padding: 4px 10px;
+  padding: 4px 20px;
   font-size: 28px;
 }
 
@@ -72,6 +88,22 @@
   border: 2px solid #000;
   border-radius: 8px;
   font-size: 28px;
+}
+
+.header-btn {
+  background-color: pulp;
+  color: #680368;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 8px;
+  height: 55px;
+  font-size: 28px;
+}
+
+.flex {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
