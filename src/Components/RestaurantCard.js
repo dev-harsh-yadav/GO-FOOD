@@ -1,6 +1,8 @@
 import { IMG_URL_CDN } from "../../constant.js";
+import { useParams } from "react-router-dom";
 
 const ResturantCard = ({ ...details }) => {
+  const{ id} =useParams();
   const { cloudinaryImageId, name, avgRating, cuisines,locality } = details;
   return (
     <div className="card">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { restaurantList } from "../../constant";
 import ResturantCard from "./RestaurantCard";
+import { Link } from "react-router-dom";
 
 function filterData(searchText, restaurantList) {
   return restaurantList.filter((restraunts) =>
@@ -24,15 +25,14 @@ const Body = () => {
     const detail = await details.json();
     console.log(detail);
     const rest =
-      (detail?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+      (detail?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants)
         // error aa rha tha kabhi ye array 4 mai hai kabhi ye array 3 mai
-        const finalrest=(rest?.length>0 ? rest :detail?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        const finalrest=(rest?.length>0 ? rest :detail?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants)
     setapiRestaurant(finalrest);
     setrestaurant(finalrest);
   } 
-
   return (
     <>
       <div className="searchbar">
@@ -63,10 +63,9 @@ const Body = () => {
           : restaurants?.map((restaurant) => {
             console.log(restaurants.length);
               return (
-                <ResturantCard
-                  {...restaurant?.info}
-                  key={restaurant?.info?.id}
-                />
+               <Link className="linkstyle" to={"/restaurants/" + restaurant?.info?.id } key={restaurant?.info?.id}> 
+               <ResturantCard   {...restaurant?.info}  />
+                </Link>
               );
             })}
       </div>
