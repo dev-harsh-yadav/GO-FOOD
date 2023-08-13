@@ -41,17 +41,21 @@
   gap: 30;
   justify-content: center;
   align-items: center;
-  background-color: #e8a3e887;
+  /* background-color: #e8a3e887; */
+  background-color: #0c08089c;
+  
 }
 .card {
   max-width: 274px;
-  min-height: 375px;
-  border: 2px solid red;
+  max-height: 451;
+  border: 2px solid rgb(68, 4, 4);
   border-radius: 15px;
   margin: 10px;
-  padding: 20px;
+  padding: 45px;
   /* aspect-ratio: 1/1.5; */
-  background-color: #8da28d33;
+  /* background-color: #8da28d33; */
+  background-color: wheat;
+  background-color: whitesmoke;
 }
 .card img {
   width: 110%;
@@ -59,7 +63,8 @@
   margin-left: -15;
 }
 .cardcontent {
-  background-color: #39daa60d;
+  /* background-color: #39daa60d; */
+  /* background-color: #39daa60d; */
 }
 .searchbar {
   justify-content: center;
@@ -140,7 +145,7 @@
 }
 .shimmerArea
 {
-  position: absolute;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,11 +155,9 @@
 {
   height: 350px;
   width: 350px;
-  background-color: lightslategray;
+  background-color: rgb(117, 121, 124);
   gap: 30;
-  
   margin: 30px;
   padding: 20px;
   border-radius: 30px;
-  position: relative;
 }

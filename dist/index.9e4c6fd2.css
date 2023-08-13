@@ -34,7 +34,7 @@
 }
 
 .content {
-  background-color: #e8a3e887;
+  background-color: #0c08089c;
   flex-flow: wrap;
   justify-content: center;
   align-items: center;
@@ -45,23 +45,19 @@
 }
 
 .card {
-  background-color: #8da28d33;
-  border: 2px solid red;
+  background-color: #f5f5f5;
+  border: 2px solid #440404;
   border-radius: 15px;
   max-width: 274px;
-  min-height: 375px;
+  max-height: 451px;
   margin: 10px;
-  padding: 20px;
+  padding: 45px;
 }
 
 .card img {
   width: 110%;
   margin-top: -15px;
   margin-left: -15px;
-}
-
-.cardcontent {
-  background-color: #39daa60d;
 }
 
 .searchbar {
@@ -152,18 +148,16 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  position: absolute;
 }
 
 .shimmereffect {
-  background-color: #789;
+  background-color: #75797c;
   border-radius: 30px;
   gap: 30px;
   width: 350px;
   height: 350px;
   margin: 30px;
   padding: 20px;
-  position: relative;
 }
 
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
