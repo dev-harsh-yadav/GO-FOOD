@@ -60337,7 +60337,7 @@ const RestaurantMenu = ()=>{
         getRestaurantinfo();
     }, []);
     async function getRestaurantinfo() {
-        const details = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=30.1318653&lng=77.2663771&restaurantId=" + resid);
+        const details = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=30.1318653&lng=77.2663771&restaurantId=" + resid + "&catalog_qa=undefined&submitAction=ENTER");
         const detail = await details.json();
         console.log(detail?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards);
         const data = detail?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards;
@@ -60487,12 +60487,12 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Shimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "shimmerArea",
-        children: Array(10).fill(" ").map((e)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: Array(10).fill(" ").map((e, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "shimmereffect"
-            }, void 0, false, {
+            }, index, false, {
                 fileName: "src/Components/Shimmer.js",
                 lineNumber: 3,
-                columnNumber: 36
+                columnNumber: 45
             }, undefined))
     }, void 0, false, {
         fileName: "src/Components/Shimmer.js",
