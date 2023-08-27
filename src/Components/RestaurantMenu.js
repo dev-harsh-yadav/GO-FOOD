@@ -28,8 +28,8 @@ const RestaurantMenu = () => {
   else {
     return( 
       <>
-      <h1 className="menuHead" >RESTAURANT MENU CARD</h1>
-      <div  className="menu">
+      <h1 className=" flex justify-center font-bold text-5xl" >RESTAURANT MENU CARD</h1>
+      <div  className="flex flex-wrap justify-center m-4">
       <MenuCard {...restaurant} />;
       </div>
       </>

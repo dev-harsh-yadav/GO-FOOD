@@ -14,10 +14,11 @@ const Logo = () => {
       <a href="/">
         <img
           alt="logo"
-          src="https://mansonproducts.com/wp-content/uploads/2017/05/Logo-Manson-Transparent-1024x609-comp.png"
+          src="https://img.freepik.com/premium-vector/corporate-logo-with-geometric-shapes_679076-241.jpg"
           id="logo-img"
           key="h"
-        ></img>
+          className="h-24"
+        />
       </a>
     </>
   );
@@ -25,37 +26,37 @@ const Logo = () => {
 const HeaderComponent = () => {
   const [isLoggedin, setIsLoggedin] = useState(false);
   return (
-    <div className="header">
+    <div className="flex justify-evenly text-3xl bg-pink-400 p-3 items-center">
       <Logo />
-      <ul className="nav-items">
-        <li>
+      <ul className="flex justify-between ">
+        <li className="m-2.5 p-4 text-bold">
           <Link to={"/"}>
             <FontAwesomeIcon icon={faHouse} /> Home{" "}
           </Link>
         </li>
-        <li>
+        <li   className="m-2.5 p-4 text-bold">
           <Link to={"/about"}>
             {" "}
             <FontAwesomeIcon icon={faAddressCard} /> About Us{" "}
           </Link>
         </li>
-        <li>
+        <li   className="m-2.5 p-4 text-bold">
           <Link to={"/contact"}>
             {" "}
             <FontAwesomeIcon icon={faEnvelope} /> Contact{" "}
           </Link>
         </li>
-        <li>
+        <li   className="m-2.5 p-4 text-bold">
           <FontAwesomeIcon icon={faCartShopping} /> Cart
         </li>
       </ul>
       <div className="flex">
         {isLoggedin ? (
-          <button className="header-btn" onClick={() => setIsLoggedin(false)}>
+          <button className="rounded-2xl bg-purple-600 p-2 text-white" onClick={() => setIsLoggedin(false)}>
             LOGOUT
           </button>
         ) : (
-          <button className="header-btn" onClick={() => setIsLoggedin(true)}>
+          <button className="rounded-2xl bg-purple-600 p-2 text-white" onClick={() => setIsLoggedin(true)}>
             LOG IN
           </button>
         )}

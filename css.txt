@@ -1,0 +1,162 @@
+
+#root
+{
+  display: flex;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  background-color: plum;
+}
+.nav-items {
+  display: flex;
+  list-style: none;
+  margin-right: 35px;
+  padding: 0px 33px;
+}
+.nav-items li {
+  padding: 17px;
+  color: #680368;
+  font-weight: 700;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.nav-items li a {
+  text-decoration: none;
+}
+.nav-items li a:visited {
+  color: #680368;
+}
+#logo-img {
+  height: 100px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 10px;
+  gap: 30;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #e8a3e887; */
+  background-color: plum;
+  
+}
+.card {
+  max-width: 274px;
+  max-height: 451;
+  border: 2px solid rgb(68, 4, 4);
+  border-radius: 15px;
+  margin: 10px;
+  padding: 45px;
+  /* aspect-ratio: 1/1.5; */
+  /* background-color: #8da28d33; */
+  background-color: wheat;
+  background-color: whitesmoke;
+}
+.card img {
+  width: 110%;
+  margin-top: -15px;
+  margin-left: -15;
+}
+.searchbar {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 10px;
+  background-color: plum;
+  display: flex;
+}
+.searchbar input {
+  font-size: 28px;
+  border-radius: 8px;
+  border: 2px solid black;
+  padding: 4px 20px;
+}
+.search-btn {
+  font-size: 28px;
+  border-radius: 8px;
+  border: 2px solid black;
+  background-color: #680368;
+  color: white ;
+  cursor: pointer;
+  padding: 6px;
+}
+.header-btn {
+  height: 55px;
+  font-size: 28px;
+  border-radius: 8px;
+  border: 2px solid black;
+  background-color: #680368;
+  color: white ;
+  cursor: pointer;
+  padding: 6px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menuHead{
+  display: flex;
+  justify-content: center;
+}
+.menu {
+  display: flex;
+  /* border: 3px solid red; */
+  padding: 23px;
+  margin: 30px ;
+  flex-wrap: wrap;
+  gap: 10;
+  justify-content: center;
+  align-items: center;
+}
+.items
+{
+  padding: 23px;
+  outline:   3px solid black; ;
+}
+.items img {
+  width: 400px;
+}
+
+.linkstyle
+{
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+.menucardbtn
+{
+  height: 37px;
+  font-size: 28px;
+  border-radius: 8px;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  padding: 6px;
+}
+.shimmerArea
+{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.shimmereffect
+{
+  height: 350px;
+  width: 350px;
+  background-color: rgb(117, 121, 124);
+  gap: 30;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 30px;
+}
