@@ -39,8 +39,8 @@ const Body = () => {
     setrestaurant(finalrest);
   }
   return (
-    <>
-      <div className="flex justify-center my-2 bg-pink-300 py-4">
+    <div className="bg-purple-100">
+      <div className="flex justify-center my-2 bg-purple-400 py-4">
         <input
           className="font-4xl pl-4 mr-6 rounded-full"
           type="text"
@@ -56,20 +56,21 @@ const Body = () => {
         />
         <button className="rounded-2xl bg-blue-600 p-2 text-white text-bold">SEARCH</button>
       </div>
-      <div className="flex flex-wrap justify-center ">
+      <div className="flex flex-row flex-wrap justify-center m-4  p-3">
         {restaurants === restaurantList ? (
           <Shimmer />
         ) : (
           restaurants?.map((restaurant,index) => {
             // console.log(restaurants.length);
             return (
-              <h1 className="">Top restaurant chains in Yamuna Nagar'</h1> && (
+              <h1 className="text-3xl">Top restaurant chains in Yamuna Nagar'</h1> && (
                 <>
                   <Link
                     className="linkstyle"
                     to={"/restaurants/" + restaurant?.info?.id}
+                    key={index}
                   >
-                    <ResturantCard  key={restaurant?.info?.id} {...restaurant?.info} />
+                    <ResturantCard  key={restaurant?.info?.id}   {...restaurant?.info} />
                   </Link>
                 </>
               )
@@ -77,7 +78,7 @@ const Body = () => {
           })
         )}
       </div>
-    </>
+    </div>
   );
 };
 export default Body;
