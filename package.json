@@ -1,10 +1,13 @@
 {
+  "homepage": "https://harsh-yadav20179.github.io/react-gh-pages",
   "name": "react-intro",
   "version": "1.0.0",
   "description": "for learning purpose",
   "scripts": {
     "start": " parcel index.html",
     "build": "parcel build index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "jest"
   },
   "repository": {
@@ -16,10 +19,10 @@
   "bugs": {
     "url": "https://github.com/harsh-yadav20179/react/issues"
   },
-  "homepage": "https://github.com/harsh-yadav20179/react#readme",
   "devDependencies": {
     "@babel/core": "^7.22.9",
     "babel-plugin-transform-remove-console": "^6.9.4",
+    "gh-pages": "^6.0.0",
     "parcel": "^2.9.3",
     "postcss": "^8.4.28",
     "process": "^0.11.10",

@@ -32,7 +32,7 @@ const Cart = () => {
         ))}
       </div>
       <div className="flex justify-center align-center font-bold text-4xl bg-purple-300 p-4 my-3 mx-1">
-        {" Total Amount "}- {totalCost}
+        {" Total Amount "}- {totalCost.toFixed(2)}
         {" ₹  "}
         <div className="flex flex-wrap justify-between">
           <button className=" text-2xl rounded-2xl bg-white p-2 text-black mx-[200px]">
