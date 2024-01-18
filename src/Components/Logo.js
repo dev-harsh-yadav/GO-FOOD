@@ -4,10 +4,10 @@ const Logo = () => {
         <a href="/">
           <img
             alt="logo"
-            src="https://img.freepik.com/premium-vector/corporate-logo-with-geometric-shapes_679076-241.jpg"
+            src="https://i.pinimg.com/564x/83/0d/f9/830df98bcfc734221f63a0230865ee74.jpg"
             id="logo-img"
             key="h"
-            className="h-24"
+            className="h-24 rounded-full"
           />
         </a>
       </>

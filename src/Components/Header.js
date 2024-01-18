@@ -38,7 +38,7 @@ const HeaderComponent = () => {
         </li>
         <li className="m-2.5 p-4 text-bold">
           <Link to={"/Instamart"}>
-            <FontAwesomeIcon icon={faEnvelope} /> Instamart{" "}
+        {   /* <FontAwesomeIcon icon={faEnvelope} /> Instamart{" "} */}
           </Link>
         </li>
         <li className="m-2.5 p-4 text-bold">

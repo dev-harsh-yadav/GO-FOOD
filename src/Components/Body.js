@@ -70,10 +70,10 @@ const Body = () => {
           onChange={(e) => setCityText(e.target.value)}
         />
         <button
-          className="rounded-2xl bg-blue-600 p-2 text-white text-bold"
+          className="rounded-2xl bg-blue-600 p-2 text-white text-bold mr-6"
           onClick={getCityRestaurant}
         >
-          get city rest
+          Find restaurant
         </button>
         <input
           className="font-4xl pl-4 mr-6 rounded-full"

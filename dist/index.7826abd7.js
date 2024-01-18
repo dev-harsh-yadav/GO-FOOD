@@ -27408,19 +27408,8 @@ const HeaderComponent = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                         className: "m-2.5 p-4 text-bold",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/Instamart",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactFontawesome.FontAwesomeIcon), {
-                                    icon: (0, _freeSolidSvgIcons.faEnvelope)
-                                }, void 0, false, {
-                                    fileName: "src/Components/Header.js",
-                                    lineNumber: 33,
-                                    columnNumber: 13
-                                }, undefined),
-                                " Instamart",
-                                " "
-                            ]
-                        }, void 0, true, {
+                            to: "/Instamart"
+                        }, void 0, false, {
                             fileName: "src/Components/Header.js",
                             lineNumber: 32,
                             columnNumber: 11
@@ -58767,9 +58756,9 @@ const Logo = ()=>{
             href: "/",
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 alt: "logo",
-                src: "https://img.freepik.com/premium-vector/corporate-logo-with-geometric-shapes_679076-241.jpg",
+                src: "https://i.pinimg.com/564x/83/0d/f9/830df98bcfc734221f63a0230865ee74.jpg",
                 id: "logo-img",
-                className: "h-24"
+                className: "h-24 rounded-full"
             }, "h", false, {
                 fileName: "src/Components/Logo.js",
                 lineNumber: 4,
@@ -60656,9 +60645,9 @@ const Body = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "rounded-2xl bg-blue-600 p-2 text-white text-bold",
+                        className: "rounded-2xl bg-blue-600 p-2 text-white text-bold mr-6",
                         onClick: getCityRestaurant,
-                        children: "get city rest"
+                        children: "Find restaurant"
                     }, void 0, false, {
                         fileName: "src/Components/Body.js",
                         lineNumber: 52,
