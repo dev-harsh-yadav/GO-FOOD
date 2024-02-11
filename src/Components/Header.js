@@ -38,14 +38,17 @@ const HeaderComponent = () => {
         </li>
         <li className="m-2.5 p-4 text-bold">
           <Link to={"/Instamart"}>
-        {   /* <FontAwesomeIcon icon={faEnvelope} /> Instamart{" "} */}
+            {/* <FontAwesomeIcon icon={faEnvelope} /> Instamart{" "} */}
           </Link>
         </li>
-        <li className="m-2.5 p-4 text-bold">
-          <Link to={"/cart"}>
-            <FontAwesomeIcon icon={faCartShopping} /> {cartItems.length}-Cart
-          </Link>
-        </li>
+        <div className=" m-2.5 relative text-bold">
+            <li >
+              <Link to={"/cart"} className=" ">
+                <span className=" text-sm top-0 right-0">{cartItems.length}</span>
+                <FontAwesomeIcon icon={faCartShopping} className="absolute mt-7 -ml-10 " />
+              </Link>
+          </li>
+      </div>
       </ul>
       <div className="flex">
         {isLoggedin ? (

@@ -8,11 +8,11 @@ import About from "./src/Components/About";
 import Contact from "./src/Components/Contact";
 import Error from "./src/Components/Error";
 import RestaurantMenu from "./src/Components/RestaurantMenu";
-// import Instamart from "./src/Components/Instamart";
 import { Provider } from "react-redux";
 import store from "./utils/store";
 import Cart from "./src/Components/Cart";
-
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 // lazy loading the instamart component
 const Instamart = lazy(() => import("./src/Components/Instamart"));
 
@@ -22,6 +22,18 @@ const AppLayout = () => {
       <Provider store={store}>
         <HeaderComponent />
         <Outlet />
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
         <Footer />
       </Provider>
     </>

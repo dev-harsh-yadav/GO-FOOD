@@ -2,10 +2,13 @@
 module.exports = {
   content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        "card-container": "400px", // Set your desired fixed height
+      },
+    },
     fontFamily: {
       sans: ["font-mono"],
-     
     },
   },
   plugins: [],
