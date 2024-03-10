@@ -3,7 +3,7 @@ import { restaurantList } from "../../constant";
 import ResturantCard from "./RestaurantCard";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
-
+import { PROXY_API_KEY_CORS } from "../../constant";
 function filterData(searchText, restaurantList) {
   return restaurantList.filter((restraunts) =>
     restraunts?.info?.name.toUpperCase().includes(searchText.toUpperCase())
@@ -47,8 +47,14 @@ const Body = () => {
   useEffect(() => {
     async function getRestaurantdata() {
       const details = await fetch(
-        `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lati}&lng=${longi}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`
+        `https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lati}&lng=${longi}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`,
+        {
+          headers: {
+            "x-cors-api-key": "temp_9c74b3d71b51e3f750d1e5a2a89905ca",
+          },
+        }
       );
+
       const detail = await details.json();
       console.log(detail);
       const rest =
